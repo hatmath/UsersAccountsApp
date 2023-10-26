@@ -5,6 +5,18 @@
     Cours: 		Applications natives sous android 1 (420-325-AH)
 	Date:		Octobre 2023
 
+## Installation nécessaire
+
+    Le projet se trouve sur github à l'adresse
+    https://github.com/hatmath/UsersAccountsApp
+
+    Voir le fichier README-GITHUB-IMPORTATION.MD si vous avez besoin d'aide
+
+    Les test pour cette application on été fait avec un emulateur Pixel 3a API 24.
+    Pourquoi pas la dernière version de l'API?
+        Pour que la fonctionnalité mailto: fonctionne bien sinon avec l'API 34 tout fonctionnera 
+        sauf l'envoie de courriel
+
 ## Énoncé
 
 	Sous Android Studio, en java, écrit moi une application qui doit permettre à l’utilisateur de se connecter.
@@ -50,8 +62,5 @@
 		- Les utilisateurs peux envoyer un courriel à une adresse de support 		
 	- Pour l'instant n'importe qui peux modifier les informations le concernant et ceux des utilisateurs qu'il voit.  
 	- Ultériueurement, il faudrait détenir le PIN qui lui est encrypté et connu de l'utilisateur seulement pour modifier les données sensibles le concernant. Le code est partiellemeent en place
-
-## Installation nécessaire
-
 
 ## À faire / Correction / Amélioration
