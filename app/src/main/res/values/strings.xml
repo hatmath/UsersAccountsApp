@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name_en">Users Accounts App</string>
+    <string name="app_name_fr">Comptes Utilisateurs App</string>
+    <string name="usersListTitle"></string>
+    <string name="parametres_menu_title">Paramètres</string>
+    <string name="deconnexion_menu_tilte">Déconnexion</string>
+    <string name="dashboard_title_fr">Tableau de bord</string>
+    <string name="addUserFAB_text">Ajouter</string>
+    <string name="back">Retour</string>
+    <string name="connectedUser">"Connecté: "</string>
+    <string name="login_email_hint">Courriel</string>
+    <string name="login_password_hint">Mot de passe</string>
+    <string name="login_connect_btn_text">Se connecter</string>
+    <string name="login_register_btn_text">S\'inscrire</string>
+    <string name="icone_content_description">statut usager</string>
+    <string name="signup_email_hint">Courriel</string>
+    <string name="signup_password_hint">Mot de passe</string>
+    <string name="signup_register_btn_text">S\'inscrire</string>
+    <string name="courriel_provenance_hint">De:</string>
+    <string name="courriel_destination_hint">Pour:</string>
+    <string name="courriel_sujet_hint">Sujet:</string>
+    <string name="courriel_texte_hint">Texte:</string>
+    <string name="courriel_envoyer_btn_text">Envoyer</string>
+    <string name="sujet_courriel_test">Sujet du courriel: Test</string>
+    <string name="texte_courriel_test">Texte du courriel: Test</string>
+
+</resources>
