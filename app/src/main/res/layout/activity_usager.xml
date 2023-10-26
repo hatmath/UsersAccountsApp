@@ -30,7 +30,7 @@
                     android:layout_span="2"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Usager"
+                    android:text="@string/usager_titre"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -40,7 +40,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Prénom" />
+                        android:text="@string/usager_prenom" />
                     <EditText
                         android:id="@+id/prenomEditText"
                         android:layout_width="0dp"
@@ -55,7 +55,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Nom" />
+                        android:text="@string/usager_nom" />
                     <EditText
                         android:id="@+id/nomEditText"
                         android:layout_width="0dp"
@@ -70,7 +70,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Surnom" />
+                        android:text="@string/usager_surnom" />
                     <EditText
                         android:id="@+id/surnomEditText"
                         android:layout_width="0dp"
@@ -85,13 +85,13 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Naissance" />
+                        android:text="@string/usager_naissance" />
                     <EditText
                         android:id="@+id/dateNaissanceEditText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:hint="aaaa-mm-jj"
+                        android:hint="@string/usager_naissance_hint"
                         android:inputType="date"
                         android:textSize="14sp"/>
                 </TableRow>
@@ -102,7 +102,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Profession" />
+                        android:text="@string/usager_profession" />
                     <EditText
                         android:id="@+id/professionEditText"
                         android:layout_width="0dp"
@@ -117,7 +117,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Email *" />
+                        android:text="@string/usager_courriel" />
                     <EditText
                         android:id="@+id/emailEditText"
                         android:layout_width="0dp"
@@ -132,7 +132,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Mot de passe *" />
+                        android:text="@string/usage_password" />
                     <EditText
                         android:id="@+id/passwordEditText"
                         android:layout_width="0dp"
@@ -147,13 +147,13 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="PIN" />
+                        android:text="@string/usager_pin" />
                     <EditText
                         android:id="@+id/pinEditText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:hint="4 chiffres secrets"
+                        android:hint="@string/usager_pin_hint"
                         android:inputType="textPassword"
                         android:textSize="14sp"/>
                 </TableRow>
@@ -164,13 +164,13 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Permissions" />
+                        android:text="@string/usager_permissions" />
                     <EditText
                         android:id="@+id/permissionsEditText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:hint="Combinaisons crud"
+                        android:hint="@string/usager_permissions_hint"
                         android:inputType="text"
                         android:textSize="14sp"/>
                 </TableRow>
@@ -181,7 +181,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Est Admin?" />
+                        android:text="@string/usager_estAdmin" />
                     <CheckBox
                         android:id="@+id/estAdminCheckBox"
                         android:layout_width="0dp"
@@ -197,7 +197,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Est valide?" />
+                        android:text="@string/usager_estValide" />
                     <CheckBox
                         android:id="@+id/estValideCheckBox"
                         android:layout_width="0dp"
@@ -226,7 +226,7 @@
                     android:layout_span="2"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Adresse"
+                    android:text="@string/usager_adresse_titre"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -236,7 +236,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Numéro" />
+                        android:text="@string/usager_adresse_numero" />
                     <EditText
                         android:id="@+id/numeroEditText"
                         android:layout_width="0dp"
@@ -251,7 +251,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Rue" />
+                        android:text="@string/usager_adresse_rue" />
                     <EditText
                         android:id="@+id/rueEditText"
                         android:layout_width="0dp"
@@ -266,7 +266,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Ville" />
+                        android:text="@string/usager_adresse_ville" />
                     <EditText
                         android:id="@+id/villeEditText"
                         android:layout_width="0dp"
@@ -281,7 +281,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Province" />
+                        android:text="@string/usager_adresse_province" />
                     <EditText
                         android:id="@+id/provinceEditText"
                         android:layout_width="0dp"
@@ -296,7 +296,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Code Postal" />
+                        android:text="@string/usager_adresse_codepostal" />
                     <EditText
                         android:id="@+id/codePostalEditText"
                         android:layout_width="0dp"
@@ -311,7 +311,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Pays" />
+                        android:text="@string/usager_adresse_pays" />
                     <EditText
                         android:id="@+id/paysEditText"
                         android:layout_width="0dp"

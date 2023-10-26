@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name_en">Users Accounts App</string>
     <string name="app_name_fr">Comptes Utilisateurs App</string>
-    <string name="usersListTitle"></string>
+    <string name="usersListTitle">Utilisateurs</string>
     <string name="parametres_menu_title">Paramètres</string>
     <string name="deconnexion_menu_tilte">Déconnexion</string>
     <string name="dashboard_title_fr">Tableau de bord</string>
@@ -23,5 +23,28 @@
     <string name="courriel_envoyer_btn_text">Envoyer</string>
     <string name="sujet_courriel_test">Sujet du courriel: Test</string>
     <string name="texte_courriel_test">Texte du courriel: Test</string>
+    <string name="usager_titre">Usager</string>
+    <string name="usager_prenom">Prénom</string>
+    <string name="usager_nom">Nom</string>
+    <string name="usager_surnom">Surnom</string>
+    <string name="usager_naissance">Naissance</string>
+    <string name="usager_naissance_hint">aaaa-mm-jj</string>
+    <string name="usager_profession">Profession</string>
+    <string name="usager_courriel">Courriel *</string>
+    <string name="usage_password">Mot de passe *</string>
+    <string name="usager_pin">PIN</string>
+    <string name="usager_pin_hint">4 chiffres secrets</string>
+    <string name="usager_permissions">Permissions</string>
+    <string name="usager_permissions_hint">Combinaisons crud</string>
+    <string name="usager_estAdmin">Est Admin?</string>
+    <string name="usager_estValide">Est valide?</string>
+    <string name="usager_adresse_titre">Adresse</string>
+    <string name="usager_adresse_numero">Numéro</string>
+    <string name="usager_adresse_rue">Rue</string>
+    <string name="usager_adresse_ville">Ville</string>
+    <string name="usager_adresse_province">Province</string>
+    <string name="usager_adresse_codepostal">Code Postal</string>
+    <string name="usager_adresse_pays">Pays</string>
+    <string name="courriel_support_usager">support@support.com</string>
 
 </resources>

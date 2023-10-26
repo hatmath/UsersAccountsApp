@@ -76,6 +76,7 @@ public class CourrielActivity extends AppCompatActivity {
         // Fonctionne bien avec des versions anciennes de l'API android comme API 24 par exemple
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         emailIntent.setData(Uri.parse("mailto:")); // seuls les clients de messagerie doivent gérer ceci
+
         emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{etDestination.getText().toString()});
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, etSujet.getText().toString());
         emailIntent.putExtra(Intent.EXTRA_TEXT, etTexte.getText().toString());

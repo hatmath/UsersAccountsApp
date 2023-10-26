@@ -24,6 +24,10 @@ public class DashboardActivity extends AppCompatActivity {
     public enum UserContext {
         USER_SELECTED,
         NO_USER_SELECTED,
+        ADMIN_USER_SELECTED,
+        ADMIN_NO_USER_SELECTED,
+        USER_USER_SELECTED,
+        USER_NO_USER_SELECTED,
         DEFAULT
     }
 
@@ -55,7 +59,7 @@ public class DashboardActivity extends AppCompatActivity {
         loggedUser = usagerManager.getUsager(loggedUserEmail);
 
         usersListTitle = findViewById(R.id.usersListTitle);
-        // usersListTitle.setText(usersListTitle.getText().toString() + " ( " + loggedUserEmail + " )");
+        usersListTitle.setText("");
 
         connectedUser = findViewById(R.id.connectedUser);
         connectedUser.setText(connectedUser.getText().toString() + " ( " + loggedUserEmail + " )");
@@ -71,7 +75,7 @@ public class DashboardActivity extends AppCompatActivity {
         deleteUserFAB = findViewById(R.id.deleteUserFAB);
         infoUserFAB = findViewById(R.id.infoUserFAB);
         emailUserFAB = findViewById(R.id.emailUserFAB);
-        setButtonVisibility(UserContext.NO_USER_SELECTED);
+        setButtonVisibility(loggedUser.estAdmin() ? UserContext.ADMIN_NO_USER_SELECTED : UserContext.USER_NO_USER_SELECTED);
 
         loadUsagers();
 
@@ -83,13 +87,13 @@ public class DashboardActivity extends AppCompatActivity {
                     // L'utilisateur a cliqué sur l'élément déjà sélectionné, donc le désélectionner
                     usersListView.setItemChecked(position, false);
                     selectedUsager = null;
-                    setButtonVisibility(UserContext.NO_USER_SELECTED);
+                    setButtonVisibility(loggedUser.estAdmin() ? UserContext.ADMIN_NO_USER_SELECTED : UserContext.USER_NO_USER_SELECTED);
                     selectedPosition = -1; // Réinitialiser la position sélectionnée
                 } else {
                     // L'utilisateur a cliqué sur un nouvel élément, donc le sélectionner
                     usersListView.setItemChecked(position, true);
                     selectedUsager = usagerManager.getFilteredUsagers(loggedUser).get(position);
-                    setButtonVisibility(UserContext.USER_SELECTED);
+                    setButtonVisibility(loggedUser.estAdmin() ? UserContext.ADMIN_USER_SELECTED : UserContext.USER_USER_SELECTED);
                     selectedPosition = position; // Mettre à jour la position sélectionnée
                 }
 
@@ -132,7 +136,11 @@ public class DashboardActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent courrielIntent = new Intent(DashboardActivity.this, CourrielActivity.class);
                 courrielIntent.putExtra("de", loggedUserEmail);
-                courrielIntent.putExtra("pour", selectedUsager.getEmail());
+                if (!loggedUser.estSuperUser() && !loggedUser.estAdmin()) {
+                    courrielIntent.putExtra("pour", getString(R.string.courriel_support_usager));
+                } else {
+                    courrielIntent.putExtra("pour", selectedUsager.getEmail());
+                }
                 startActivityIfNeeded(courrielIntent, COURRIEL_CALL_ID);
             }
         });
@@ -168,7 +176,8 @@ public class DashboardActivity extends AppCompatActivity {
         usersListView.clearChoices();
         adapter.notifyDataSetChanged();
         selectedUsager = null;
-        setButtonVisibility(UserContext.NO_USER_SELECTED);
+        setButtonVisibility(loggedUser.estAdmin() ? UserContext.ADMIN_NO_USER_SELECTED : UserContext.USER_NO_USER_SELECTED);
+
     }
 
     private void removeUsager(Usager usager) {
@@ -199,6 +208,34 @@ public class DashboardActivity extends AppCompatActivity {
 
             case NO_USER_SELECTED:
                 addUserFAB.setVisibility(View.VISIBLE);
+                deleteUserFAB.setVisibility(View.INVISIBLE);
+                infoUserFAB.setVisibility(View.INVISIBLE);
+                emailUserFAB.setVisibility(View.INVISIBLE);
+                break;
+
+            case ADMIN_USER_SELECTED:
+                addUserFAB.setVisibility(View.INVISIBLE);
+                deleteUserFAB.setVisibility(View.VISIBLE);
+                infoUserFAB.setVisibility(View.VISIBLE);
+                emailUserFAB.setVisibility(View.VISIBLE);
+                break;
+
+            case ADMIN_NO_USER_SELECTED:
+                addUserFAB.setVisibility(View.VISIBLE);
+                deleteUserFAB.setVisibility(View.INVISIBLE);
+                infoUserFAB.setVisibility(View.INVISIBLE);
+                emailUserFAB.setVisibility(View.INVISIBLE);
+                break;
+
+            case USER_USER_SELECTED:
+                addUserFAB.setVisibility(View.INVISIBLE);
+                deleteUserFAB.setVisibility(View.VISIBLE);
+                infoUserFAB.setVisibility(View.VISIBLE);
+                emailUserFAB.setVisibility(View.VISIBLE);
+                break;
+
+            case USER_NO_USER_SELECTED:
+                addUserFAB.setVisibility(View.INVISIBLE);
                 deleteUserFAB.setVisibility(View.INVISIBLE);
                 infoUserFAB.setVisibility(View.INVISIBLE);
                 emailUserFAB.setVisibility(View.INVISIBLE);
